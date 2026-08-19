@@ -43,18 +43,4 @@ OnlineTest.java   → Single-file application (UI + logic combined)
 | `check()` | Validates whether the currently selected radio button is the correct answer |
 | `actionPerformed()` | Handles Next, Bookmark, dynamic Bookmark-N, and Result button clicks |
 
-## Known Limitations
 
-- Questions and answers are **hardcoded** (not loaded from a file or database)
-- Uses `null` layout with manually set pixel bounds — not responsive to window resizing
-- No input validation preventing skipping a question without selecting an answer
-- Bookmark buttons are placed with a fixed offset (`480, 20 + 30*x`) and can overflow the window if many questions are bookmarked
-- Exiting via the Result dialog calls `System.exit(0)` directly
-
-## Possible Improvements
-
-- Load questions from an external file (JSON/CSV) instead of hardcoding
-- Use `GridBagLayout` or a modern layout manager for responsiveness
-- Add a timer/countdown for the test
-- Persist bookmarks and results between sessions
-- Migrate to JavaFX for a more modern UI
